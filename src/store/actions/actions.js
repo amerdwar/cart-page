@@ -17,7 +17,7 @@ function createPlaceOrder(res) {
   }
 }
 
-//use thunk for placeOrder ,call api and then wait for response 
+//use thunk for placeOrder ,call api and then dispatch (async use case)
 export function placeOrder() {
   return (
     (dispatch) => {
@@ -29,12 +29,13 @@ export function placeOrder() {
 
 }
 
+//test thunk  (action creation usecase)
 export function clearCart() {
   return dispatch=>dispatch({type:CLEAR_CART});
 }
 
 
-//test thunk 
+
 export function removeFromCart(id) {
 
   return {

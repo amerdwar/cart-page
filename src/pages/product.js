@@ -43,7 +43,7 @@ class Product extends Component {
         const product = this.state.product;
         return (<div className="row">
             <div className="col-6">
-                <img src={product.image} width={'100%'} ></img>
+                <img alt="..." src={product.image} width={'100%'} ></img>
             </div>
             <div className="col-6">
                 <h1>{product.name}</h1>

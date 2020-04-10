@@ -1,4 +1,4 @@
-import { createStore, compose, applyMiddleware } from 'redux'
+import { createStore, compose, applyMiddleware,combineReducers } from 'redux'
 import cartReducer from './reducers/index'
 import thunk from "redux-thunk"
 import throttle from 'lodash.throttle'
@@ -29,8 +29,13 @@ const initialState = loadStateFromLocalStorage();
 
 const enableReduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 const applyThunk = applyMiddleware(thunk);
+const appReducer =  combineReducers({
+    cart:cartReducer
+});
 
-const store = createStore(cartReducer, initialState, compose(applyThunk, enableReduxDevTools));
+
+
+const store = createStore(appReducer, initialState, compose(applyThunk, enableReduxDevTools));
 
 //save state every 2 s
 
