@@ -1,8 +1,8 @@
 {
   "name": "basket_of_items",
   "version": "0.1.1",
-    "homepage": "http://amerdwar.github.io/amerdwar-task",
-  "private": true,
+    "homepage": "https://amerdwar.github.io/amerdwar-task",
+  "private": false,
    "engines" : { "node" : "12.16.1" } ,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",

@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/amerdwar-task/static/css/main.38c0574f.chunk.css",
-    "main.js": "/amerdwar-task/static/js/main.d1263cdc.chunk.js",
-    "main.js.map": "/amerdwar-task/static/js/main.d1263cdc.chunk.js.map",
+    "main.js": "/amerdwar-task/static/js/main.c358c698.chunk.js",
+    "main.js.map": "/amerdwar-task/static/js/main.c358c698.chunk.js.map",
     "runtime-main.js": "/amerdwar-task/static/js/runtime-main.a82e35e2.js",
     "runtime-main.js.map": "/amerdwar-task/static/js/runtime-main.a82e35e2.js.map",
-    "static/js/2.296c3bdd.chunk.js": "/amerdwar-task/static/js/2.296c3bdd.chunk.js",
-    "static/js/2.296c3bdd.chunk.js.map": "/amerdwar-task/static/js/2.296c3bdd.chunk.js.map",
+    "static/js/2.790e2e91.chunk.js": "/amerdwar-task/static/js/2.790e2e91.chunk.js",
+    "static/js/2.790e2e91.chunk.js.map": "/amerdwar-task/static/js/2.790e2e91.chunk.js.map",
     "index.html": "/amerdwar-task/index.html",
-    "precache-manifest.c6d80b32abfcbb46e698659c30081af4.js": "/amerdwar-task/precache-manifest.c6d80b32abfcbb46e698659c30081af4.js",
+    "precache-manifest.1e69574272c69499828c4e33eeb1a3df.js": "/amerdwar-task/precache-manifest.1e69574272c69499828c4e33eeb1a3df.js",
     "service-worker.js": "/amerdwar-task/service-worker.js",
     "static/css/main.38c0574f.chunk.css.map": "/amerdwar-task/static/css/main.38c0574f.chunk.css.map",
-    "static/js/2.296c3bdd.chunk.js.LICENSE.txt": "/amerdwar-task/static/js/2.296c3bdd.chunk.js.LICENSE.txt"
+    "static/js/2.790e2e91.chunk.js.LICENSE.txt": "/amerdwar-task/static/js/2.790e2e91.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a82e35e2.js",
-    "static/js/2.296c3bdd.chunk.js",
+    "static/js/2.790e2e91.chunk.js",
     "static/css/main.38c0574f.chunk.css",
-    "static/js/main.d1263cdc.chunk.js"
+    "static/js/main.c358c698.chunk.js"
   ]
 }

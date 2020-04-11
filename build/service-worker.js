@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/amerdwar-task/precache-manifest.c6d80b32abfcbb46e698659c30081af4.js"
+  "/amerdwar-task/precache-manifest.1e69574272c69499828c4e33eeb1a3df.js"
 );
 
 self.addEventListener('message', (event) => {
