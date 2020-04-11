@@ -25,7 +25,7 @@ setTimeout(()=>
             <h1>Products</h1>
             <div className="row">
                 {this.state.products.map((product, index) =>
-                    <div className="col-4" key={index}>
+                    <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                         <ProductItem product={product} />
                     </div>)
                 }

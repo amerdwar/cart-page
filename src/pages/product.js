@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getProductById } from '../api/products'
 import { addToCart } from '../store/actions/actions'
 import { connect } from "react-redux"
+import classNames from 'classnames'
 class Product extends Component {
     state = {
         loading: true,
@@ -9,17 +10,19 @@ class Product extends Component {
         quantity: 0
     };
     changeQuantity = (event) => {
-
-        if (event.target.value > 20) {
+        let num=parseInt(event.target.value);
+        if ( num> 20) {
             alert("Max number is 20");
             //TODO add modal and delete alert
+            
             this.setState({
                 quantity: 20
             });
 
         } else {
+        
             this.setState({
-                quantity: event.target.value
+                quantity:  num
             });
         }
     }
@@ -34,18 +37,23 @@ class Product extends Component {
 
     };
     addToCart = (product) => {
-     
-        return this.props.addToCart(product, this.state.quantity);
+        const q=this.state.quantity;
+        this.setState({quantity:0});
+        return this.props.addToCart(product, q);
     };
     render() {
         if (this.state.loading)
             return 'loading ...';
         const product = this.state.product;
+
+        let btnAddtoCartClasses =
+        classNames ('btn btn-primary btn-block',{'disabled': this.state.quantity=== 0 });
+
         return (<div className="row">
-            <div className="col-6">
+            <div className="col-lg-6 col-md-6 col-sm-12">
                 <img alt="..." src={product.image} width={'100%'} ></img>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-md-6 col-sm-12">
                 <h1>{product.name}</h1>
                 <p>Price: {product.price}$</p>
                 <p> {product.description}</p>
@@ -54,7 +62,10 @@ class Product extends Component {
                 <br />
                 <br />
                 <p> Total: {this.state.quantity * product.price}</p>
-                <button className="btn btn-primary" onClick={() => this.addToCart(product)} >Add to cart</button>
+                <button disabled={ (this.state.quantity === 0)} className={btnAddtoCartClasses} onClick={() => this.addToCart(product)} >
+                    Add to cart{" "}
+                    <span class="badge badge-danger" >{this.props.totalQuantity}</span>
+                </button>
             </div>
         </div>);
     }
@@ -66,7 +77,19 @@ const mapDispatchToProps = (dispatch) => {
     };
 }
 
+const mapStateToProps = (state, ownProps) => {
+    return {
+        totalQuantity: getTotalQuantity(state, ownProps.match.params.id)
+    }
+}
+function getTotalQuantity(state, id) {
+    let item = state.cart.find(item => item.product.id === id);
+    if (item) {
 
-    
+        return item.quantity;
+    } else {
+        return "0";
+    }
+}
 
-export default connect(null, mapDispatchToProps)(Product);
+export default connect(mapStateToProps, mapDispatchToProps)(Product);
