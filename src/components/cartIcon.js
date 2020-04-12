@@ -7,8 +7,12 @@ export  class CartIcon extends Component {
     render(){
         return (<div id = "cart-icon"> 
         <Link to = "/cart">
-            <i className="fa fa-shopping-cart"> </i>
-    <span className="badge badge-danger">{this.props.totalQuantity}</span>
+            
+            <div className="col-12">
+            <span className="badge badge-danger">{this.props.totalQuantity}</span>
+            </div> <div className="col-12">
+            <i className="fa fa-shopping-cart" > </i>
+            </div>
         </Link>
         </div>);
     }

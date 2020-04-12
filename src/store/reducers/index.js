@@ -60,7 +60,7 @@ function removeFromCart(state, action) {
 }
 
 function placeOrder(state, action) {
-    alert(action.result.message);
+    //alert(action.result.message);
     if (action.result.code === 200)
         return [];
     else
@@ -69,7 +69,7 @@ function placeOrder(state, action) {
 }
 
 function clearCart(state, action) {
-  if (window.confirm("Are yous sure want to clear Cart"))
+
         return [];
  
 }

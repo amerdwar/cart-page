@@ -24,7 +24,7 @@ export function placeOrder() {
       placeOrderApi().then(res=>
   dispatch(createPlaceOrder(res))
 
-);
+ );
     })
 
 }

@@ -1,13 +1,10 @@
 #cart-icon i {
 font-size: 24px;
-color: blue;
-position: absolute;
-right:10px;
-top:25px
+color: whitesmoke;
+
 }
 
    #cart-icon span { 
-    position: absolute;
-top:5px;
-right:5px
+    font-size: 13px;
+
 }

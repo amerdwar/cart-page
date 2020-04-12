@@ -10,19 +10,21 @@ class Product extends Component {
         quantity: 0
     };
     changeQuantity = (event) => {
-        let num=parseInt(event.target.value);
-        if ( num> 20) {
+        if(!!!event.target.value)
+            return;
+        let num = parseInt(event.target.value);
+        if (num > 20) {
             alert("Max number is 20");
             //TODO add modal and delete alert
-            
+
             this.setState({
                 quantity: 20
             });
 
         } else {
-        
+
             this.setState({
-                quantity:  num
+                quantity: num
             });
         }
     }
@@ -37,19 +39,27 @@ class Product extends Component {
 
     };
     addToCart = (product) => {
-        const q=this.state.quantity;
-        this.setState({quantity:0});
+        const q = this.state.quantity;
+        this.setState({ quantity: 0 });
         return this.props.addToCart(product, q);
     };
     render() {
         if (this.state.loading)
-            return 'loading ...';
+            return (<div className="text-center"><br /><br /><div className="text-center  spinner-border  text-primary" style={{ width: "10rem", height: "10rem" }}
+                role="status">
+                <span className="sr-only">Loading...</span>
+            </div></div>);
+
+
         const product = this.state.product;
 
         let btnAddtoCartClasses =
-        classNames ('btn btn-primary btn-block',{'disabled': this.state.quantity=== 0 });
+            classNames('btn btn-primary btn-block', { 'disabled': this.state.quantity === 0 });
 
-        return (<div className="row">
+        return (
+   
+        <div className="row">
+        
             <div className="col-lg-6 col-md-6 col-sm-12">
                 <img alt="..." src={product.image} width={'100%'} ></img>
             </div>
@@ -62,9 +72,9 @@ class Product extends Component {
                 <br />
                 <br />
                 <p> Total: {this.state.quantity * product.price}</p>
-                <button disabled={ (this.state.quantity === 0)} className={btnAddtoCartClasses} onClick={() => this.addToCart(product)} >
+                <button disabled={(this.state.quantity === 0)} className={btnAddtoCartClasses} onClick={() => this.addToCart(product)} >
                     Add to cart{" "}
-                    <span class="badge badge-danger" >{this.props.totalQuantity}</span>
+                    <span className="badge badge-danger" >{this.props.totalQuantity}</span>
                 </button>
             </div>
         </div>);

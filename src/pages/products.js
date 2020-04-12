@@ -19,7 +19,10 @@ setTimeout(()=>
     }
     render() {
         if (this.state.loading)
-        return 'loading ...';
+        return (<div className="text-center"><br/><br/><div className="text-center  spinner-border  text-primary" style={{width: "10rem", height: "10rem"}} 
+        role="status">
+        <span className="sr-only">Loading...</span>
+      </div></div>);
 
         return <div>
             <h1>Products</h1>
