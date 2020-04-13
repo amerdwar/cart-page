@@ -1,8 +1,8 @@
 {
   "name": "basket_of_items",
   "version": "0.1.1",
+  "homepage": "http://amerdwar.github.io/cart-page",
   "private": false,
-  
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -16,7 +16,6 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
-
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
@@ -45,5 +44,8 @@
       "not dead",
       "not op_mini all"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
