@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 import classNames from 'classnames'
 class Cart extends Component {
     state = {
-        show: false,
+            show: false,
 confirm:''
     }
     handleClose = () => {
@@ -67,12 +67,12 @@ confirm:''
                 <Modal.Header closeButton>
                     <Modal.Title>Confirmation</Modal.Title>
                 </Modal.Header>
-            <Modal.Body>{'Are you sure want to '+ (this.state.confirm=='clearCart'?'clear cart?':'place order ?')}</Modal.Body>
+            <Modal.Body>{'Are you sure want to '+ (this.state.confirm==='clearCart'?'clear cart?':'place order ?')}</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={this.handleClose}>
                         Close
                          </Button>
-                    <Button variant="primary" onClick={ (this.state.confirm=='clearCart'?this.props.clearCart :this.props.placeOrder )} >
+                    <Button variant="primary" onClick={ (this.state.confirm==='clearCart'?this.props.clearCart :this.props.placeOrder )} >
                         Ok
                            </Button>
                 </Modal.Footer>

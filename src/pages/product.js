@@ -15,7 +15,7 @@ class Product extends Component {
         let num = parseInt(event.target.value);
         if (num > 20) {
             alert("Max number is 20");
-            //TODO add modal and delete alert
+            
 
             this.setState({
                 quantity: 20
@@ -58,8 +58,8 @@ class Product extends Component {
 
         return (
    
-        <div className="row">
-        
+        <div className="row pt-4">
+    
             <div className="col-lg-6 col-md-6 col-sm-12">
                 <img alt="..." src={product.image} width={'100%'} ></img>
             </div>
@@ -71,7 +71,7 @@ class Product extends Component {
                 <input type="number" max="20" min="0" value={this.state.quantity} onChange={this.changeQuantity} />
                 <br />
                 <br />
-                <p> Total: {this.state.quantity * product.price}</p>
+                <p> Total: {this.state.quantity * product.price} $</p>
                 <button disabled={(this.state.quantity === 0)} className={btnAddtoCartClasses} onClick={() => this.addToCart(product)} >
                     Add to cart{" "}
                     <span className="badge badge-danger" >{this.props.totalQuantity}</span>

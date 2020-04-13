@@ -45,11 +45,13 @@ let prevIcon =  <span aria-hidden="true" className="fa fa-chevron-circle-left bl
               alt={product.name}
             />
             <Carousel.Caption >
-            <div style={{ lineHeight:"inherit",minWidth:"100px",minHeight:"70px",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"norap"}}>
+            <div id="homeCaption">
               <h3>{product.name}</h3>
-          
+              </div>
+          <div id="homeDescription">
               <p>{product.description}</p>
               </div>
+         
             </Carousel.Caption>
             </Link>
           </Carousel.Item>
